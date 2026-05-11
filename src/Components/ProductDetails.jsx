@@ -65,14 +65,16 @@ const ProductDetails = () => {
 
       <div className="details-grid">
         <div className="details-image-wrapper">
-          <img
-src={
-               product.image
-                 ? `${BASE_URL}/uploads/${product.image.replace("/uploads/", "")}`
-                 : "/placeholder.png"
-             }
-            alt={product.name}
-          />
+           <img
+                src={
+                 product.image
+                   ? product.image.startsWith('http')
+                     ? product.image
+                     : `${BASE_URL}/uploads/${product.image}`
+                   : "/placeholder.png"
+               }
+             alt={product.name}
+           />
         </div>
 
         <div className="details-info">

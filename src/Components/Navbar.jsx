@@ -54,7 +54,7 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${hidden ? "hidden" : "visible"}`}>
         <div className="nav-container">
-          <img src="/public/Limpr_3K.jpeg" alt="" width={40} />
+          <img src="/Limpr_3K.jpeg" alt="" width={40} />
           <h1 className="logo">Skins</h1>
 
           <ul className={`nav-links ${menuOpen ? "active" : ""}`}>

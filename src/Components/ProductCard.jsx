@@ -17,16 +17,18 @@ const ProductCard = ({ product }) => {
       className="product-card"
       onClick={() => navigate(`/product/${product.id}`)}
     >
-      <div className="image-wrapper">
-        <img
-src={
-             product.image
-               ? `${BASE_URL}/uploads/${product.image.replace("/uploads/", "")}`
-               : "/placeholder.png"
-           }
-          alt={product.name}
-          className="product-image"
-        />
+       <div className="image-wrapper">
+         <img
+             src={
+              product.image
+                ? product.image.startsWith('http')
+                  ? product.image
+                  : `${BASE_URL}/uploads/${product.image}`
+                : "/placeholder.png"
+            }
+           alt={product.name}
+           className="product-image"
+         />
         <div className="price-badge">Ksh {product.price}</div>
       </div>
 
