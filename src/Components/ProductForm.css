@@ -1,0 +1,122 @@
+/* Page wrapper only */
+.add-product-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+/* Card only */
+.add-product-card {
+    background: var(--surface);
+    color: var(--text);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 420px;
+}
+
+.add-product-card h2 {
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.add-product-card input,
+.add-product-card select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.add-product-card input:focus,
+.add-product-card select:focus {
+    border-color: var(--primary);
+}
+
+.add-product-drag-box {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    background: var(--bg);
+    color: var(--text);
+    transition: border-color 0.3s;
+}
+
+.add-product-drag-box:hover {
+    border-color: var(--primary);
+}
+
+.add-product-preview-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.add-product-preview-wrapper img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.add-product-remove-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.add-product-progress-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.add-product-progress {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.modal-buttons button[type="submit"] {
+    background: var(--primary);
+    color: white;
+}
+
+.modal-buttons button[type="button"] {
+    background: var(--border);
+    color: var(--text);
+}

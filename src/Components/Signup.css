@@ -1,0 +1,18 @@
+/* Reusing styles from Signin.css by making them consistent */
+@import "./Signin.css";
+
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,96 @@
+.footer {
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+    color: var(--text);
+    padding: 40px 20px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -4px 15px var(--shadow);
+    border-top: 1px solid var(--border);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-size: 26px;
+    color: var(--primary);
+}
+
+.footer-brand p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+.footer-links .social-links li a {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-links .social-links li a:hover {
+    color: var(--primary);
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
