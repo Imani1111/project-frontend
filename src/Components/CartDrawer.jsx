@@ -37,7 +37,7 @@ const CartDrawer = () => {
                   <img
                     src={
                       item.image
-                        ? `${BASE_URL}/uploads/${item.image.replace("/uploads/", "")}`
+                        ? item.image.startsWith('http') ? item.image : `${BASE_URL}/uploads/${item.image.replace("/uploads/", "")}`
                         : "/placeholder.png"
                     }
                     alt={item.name}

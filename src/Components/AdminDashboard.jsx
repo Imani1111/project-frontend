@@ -112,7 +112,7 @@ const AdminDashboard = () => {
                     <td>
                       {p.image && (
                         <img
-                          src={`${BASE_URL}/uploads/${p.image}`}
+                          src={p.image.startsWith('http') ? p.image : `${BASE_URL}/uploads/${p.image}`}
                           alt={p.name}
                           width={50}
                         />

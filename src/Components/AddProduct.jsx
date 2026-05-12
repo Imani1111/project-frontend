@@ -109,7 +109,7 @@ const AddProduct = ({ onClose, onProductAdded }) => {
 
     try {
       const response = await API.post(
-        "/api/upload",
+        "/products/addproduct",
         data,
         {
           headers: {

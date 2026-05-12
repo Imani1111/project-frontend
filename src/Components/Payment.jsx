@@ -65,7 +65,7 @@ const Payment = () => {
         <img
           src={
             product.image
-              ? `${BASE_URL_IMG}/uploads/${product.image.replace("/uploads/", "")}`
+              ? (product.image.startsWith('http') ? product.image : `${BASE_URL_IMG}/uploads/${product.image.replace("/uploads/", "")}`)
               : "https://via.placeholder.com/300"
           }
           alt={product.name}
